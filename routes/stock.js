@@ -29,9 +29,9 @@ router.get('/getAllStocks',(req,res) => {
 })
 
 router.get('/getStockDetail',(req,res) => {
-    const id = req.body
+    const id = req.query.id
     console.log(id)
-    StockModel.find({ _id : id })
+    StockModel.findById({ _id : id })
     .then(doc => {
         res.status(201).json(doc)
     })
