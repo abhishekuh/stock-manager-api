@@ -11,8 +11,9 @@ var Schema = mongoose.Schema;
 
 var StockModelSchema = new Schema({
     stockName : String,
-    stockDate : String,
-    stockPrice : String
+    stockInfo : Array,
+    // stockDate : String,
+    // stockPrice : String
   });
 
 module.exports = mongoose.model('Stock',StockModelSchema)

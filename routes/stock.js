@@ -6,8 +6,9 @@ router.post('/createStock',(req,res) => {
     console.log("create stock",req.body)
     const stock = new StockModel({
         stockName : req.body.stockName,
-        stockDate:req.body.stockDate,
-        stockPrice:req.body.stockPrice
+        stockInfo : req.body.stockInfo
+        // stockDate:req.body.stockDate,
+        // stockPrice:req.body.stockPrice
     })
     stock.save()
     .then(doc => {
