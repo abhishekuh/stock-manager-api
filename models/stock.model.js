@@ -11,7 +11,8 @@
 
 var mongoose = require('mongoose');
 
-var mongoDB = 'mongodb+srv://abhishek:abhishek@cluster0.yzurw.mongodb.net/stockDB?retryWrites=true&w=majority';
+// var mongoDB = 'mongodb+srv://abhishek:abhishek@cluster0.og6xg.mongodb.net/stockDB?retryWrites=true&w=majority';
+var mongoDB = 'mongodb+srv://abhishek:abhishek@cluster0.og6xg.mongodb.net/stockDB?retryWrites=true&w=majority';
 mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true},() => console.log('Stock model Connected to DB !'));
 
 var db = mongoose.connection;
